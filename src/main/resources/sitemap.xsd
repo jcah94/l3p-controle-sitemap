@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    <xs:element name="url">
+        <xs:complexType>
+            <xs:attribute name="loc" type="xs:string" use="required"/>
+            <xs:attribute name="lastmod" type="xs:string" use="required"/>
+            <xs:attribute name="changefreq" type="xs:string" use="required"/>
+            <xs:attribute name="priority" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="urlset">
+        <xs:complexType>
+            <xs:attribute name="url" type ="ListU"/>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="ListU">
+        <xs:sequence>
+            <xs:element name="list" type="List" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="List">
+        
+    </xs:complexType>
+</xs:schema>
+
